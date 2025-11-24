@@ -38,13 +38,6 @@ body {
     margin-top: -15px;
 }
 
-.form-box {
-    background: rgba(255,255,255,0.95);
-    padding: 25px;
-    border-radius: 25px;
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
-    margin-top: 20px;
-}
 
 </style>
 """, unsafe_allow_html=True)
