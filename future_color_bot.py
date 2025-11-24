@@ -52,7 +52,7 @@ body {
 # ---------------- HEADER WITH FUN IMAGES ----------------
 
 # Fun, kid-friendly images from the internet
-fun_image = "https://cdn-icons-png.flaticon.com/512/2729/2729007.png"
+fun_image = "https://yt3.ggpht.com/ytc/AIdro_lNE9F1qUp8GvAxWoWy67enscUnKgwEB5Rj00Fm35aa-w=s800-c-k-c0x00ffffff-no-rw"
 robot_image = "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
 
 st.markdown(f"""
