@@ -77,15 +77,64 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 # ---------------- FUTURE MESSAGES ----------------
 messages = {
-    "Red": "🔥 You are bold and passionate! Big adventures await you.",
-    "Blue": "🌊 Calm and intelligent — academic success is in your future!",
-    "Green": "🌿 Kind-hearted and peaceful — you will inspire many people.",
-    "Yellow": "🌟 Cheerful and creative — amazing ideas are coming your way!",
-    "Purple": "🔮 Unique thinker — you will shine in unexpected ways!",
-    "Pink": "💖 Positive and loving — people enjoy being around you.",
-    "Black": "⚫ Strong, focused, and determined — success is guaranteed.",
-    "White": "🤍 Calm and pure — you bring peace wherever you go."
+    "Red": (
+        "🔥 You are bold, passionate, and full of unstoppable energy! "
+        "Your future is filled with exciting adventures and leadership opportunities. "
+        "People naturally look up to you because of your confidence and strong personality. "
+        "Whatever you dream of — sports, science, arts, or innovation — you will chase it with power! "
+        "A bright and thrilling path awaits you!"
+    ),
+
+    "Blue": (
+        "🌊 Calm, intelligent, and thoughtful — you are someone who brings peace wherever you go. "
+        "Your future shows great success in academics and creative thinking. "
+        "Because of your strong focus and clarity, you will solve complex problems that others find difficult. "
+        "A future filled with knowledge, wisdom, and meaningful achievements waits for you!"
+    ),
+
+    "Green": (
+        '🌿 You have a gentle heart and a peaceful soul. You care for people and nature equally. '
+        "Your future shines brightly with kindness, creativity, and emotional strength. "
+        "You will inspire many people with your calm presence, positive attitude, and ability to help others. "
+        "A beautiful, harmonious journey lies ahead for you!"
+    ),
+
+    "Yellow": (
+        "🌟 Cheerful, bright, and full of brilliant ideas — you are a natural creator! "
+        "Your future is overflowing with creativity, imagination, and fun experiences. "
+        "People love your positive energy, and you have the power to make any place happier. "
+        "You will shine in everything you do, especially in areas like art, innovation, and teamwork!"
+    ),
+
+    "Purple": (
+        "🔮 You are unique, imaginative, and full of deep thoughts. "
+        "Your future holds extraordinary success in fields that require creativity, strategy, and innovation. "
+        "You think differently from others — and that is your greatest strength. "
+        "One day, your ideas will truly make a difference in the world!"
+    ),
+
+    "Pink": (
+        "💖 You are loving, joyful, and full of kindness. "
+        "Your future is filled with friendships, happy experiences, and opportunities to spread positivity. "
+        "People enjoy being around you because you make them feel valued and special. "
+        "A warm, cheerful, and exciting journey awaits you!"
+    ),
+
+    "Black": (
+        "⚫ Strong, focused, and extremely determined — you never give up! "
+        "Your future shows leadership, discipline, and major achievements. "
+        "You have the power to stay calm under pressure and handle challenges better than most people. "
+        "A successful and powerful destiny is waiting for you!"
+    ),
+
+    "White": (
+        "🤍 Pure-hearted, calm, and peaceful — you bring comfort and clarity to everyone around you. "
+        "Your future is full of balance, emotional strength, and gentle success. "
+        "You will create harmony in your surroundings and become a source of inspiration for others. "
+        "A serene and beautiful journey lies ahead for you!"
+    )
 }
+
 
 # ---------------- SUBMIT BUTTON ----------------
 if st.button("✨ Reveal My Future"):
