@@ -1,55 +1,109 @@
 import streamlit as st
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
-from reportlab.lib import colors
-from io import BytesIO
 import pandas as pd
 
-st.set_page_config(page_title="Future Color Bot", layout="centered")
+# ---- PAGE SETUP ----
+st.set_page_config(page_title="Future Color Bot", layout="wide")
 
-# Title
-st.title("🎨 Future Color Bot")
-st.write("A Creative Project by Grade 7 • Amrita Vidyalayam")
+# Background Colour
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #FFEBD4;
+        }
+        .main {
+            background-color: #FFEBD4;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# User inputs
-name = st.text_input("Enter your Name")
-age = st.text_input("Enter your Age")
-city = st.text_input("Enter your City")
+# ---- HEADER CARD ----
+st.markdown(
+    """
+    <div style="
+        background-color:#FFF4E6;
+        padding:30px;
+        border-radius:20px;
+        text-align:center;
+        border: 3px solid #FFB067;">
+        
+        <h1 style="color:#A0328C;">🌈 Welcome to the Computer Expo 2025!</h1>
+        <h2 style="color:#FF4F70;">Amrita Vidyalayam</h2>
+        <h4 style="color:#444;">A Creative Project by Grade 7 Students 💻✨</h4>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# ---- FUN IMAGES ----
+st.write("")
+st.write("")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.image("https://cdn-icons-png.flaticon.com/512/3081/3081875.png", width=150)
+with col2:
+    st.image("https://cdn-icons-png.flaticon.com/512/527/527020.png", width=150)
+with col3:
+    st.image("https://cdn-icons-png.flaticon.com/512/3793/3793447.png", width=150)
+
+st.write("")
+
+# ---- INPUT CARD ----
+st.markdown(
+    """
+    <div style="
+        background-color:#FFF9F0;
+        padding:25px;
+        border-radius:20px;
+        border:2px solid #FFB067;">
+        <h3 style="text-align:center; color:#B22E6F;">✨ Tell Us About You</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+name = st.text_input("🧒 Your Name")
+age = st.text_input("🎂 Your Age")
+city = st.text_input("🏙 Your City")
 
 colors_list = ["Red", "Blue", "Yellow", "Green", "Pink", "Purple", "Orange"]
-color = st.selectbox("Pick Your Favourite Color", colors_list)
+color = st.selectbox("🎨 Pick Your Favourite Colour", colors_list)
 
+# ---- FUTURE MESSAGES ----
 messages = {
-    "Red": "You are bold and passionate! Big adventures await you.",
-    "Blue": "You are calm, wise, and creative. A bright future lies ahead!",
-    "Yellow": "You are cheerful and full of energy. Happiness follows you!",
-    "Green": "You are peaceful and smart. Success comes naturally to you.",
-    "Pink": "You are loving, kind, and full of imagination!",
-    "Purple": "You are unique and talented. Magic is in your future!",
-    "Orange": "You are enthusiastic and confident. Great things await!"
+    "Red": "🔥 You are bold and passionate! Big adventures await you.",
+    "Blue": "🌊 You are calm, wise, and creative. A bright future lies ahead!",
+    "Yellow": "🌟 You are cheerful and full of energy. Happiness follows you!",
+    "Green": "🍀 You are peaceful and smart. Success comes naturally to you.",
+    "Pink": "💖 You are loving, kind, and full of imagination!",
+    "Purple": "🔮 You are unique and talented. Magic is in your future!",
+    "Orange": "⚡ You are enthusiastic and confident. Great things await!"
 }
 
 excel_file = "futurecolor_data.xlsx"
 
-# Ensure Excel exists
+# Make sure excel exists
 try:
     df = pd.read_excel(excel_file)
 except:
     df = pd.DataFrame(columns=["Name", "Age", "City", "Favorite Color", "Message"])
     df.to_excel(excel_file, index=False)
 
-# Button
-if st.button("✨ Reveal My Future"):
+# ---- BUTTON ACTION ----
+if st.button("🌟 Reveal My Future!"):
 
     if not name or not age or not city:
-        st.error("Please fill all fields!")
+        st.error("⚠️ Please fill all fields!")
     else:
         msg = messages[color]
 
         st.success(f"Hi **{name}**, here is your colourful future:")
         st.info(msg)
 
-        # Save to Excel
+        # Save to excel
         new_row = {
             "Name": name,
             "Age": int(age),
@@ -57,38 +111,18 @@ if st.button("✨ Reveal My Future"):
             "Favorite Color": color,
             "Message": msg
         }
-
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
         df.to_excel(excel_file, index=False)
 
-        st.success("Your response has been saved to Excel! 📘")
+        st.success("🎉 Saved your response! Thank you for visiting the Expo.")
 
-        # Generate PDF Certificate
-        buffer = BytesIO()
-        c = canvas.Canvas(buffer, pagesize=letter)
-
-        c.setFont("Helvetica-Bold", 24)
-        c.drawCentredString(300, 740, "Certificate of Participation")
-
-        c.setFont("Helvetica", 16)
-        c.drawCentredString(300, 700, f"Presented to: {name}")
-
-        c.setFont("Helvetica", 14)
-        c.drawCentredString(300, 660, f"Age: {age}  |  City: {city}")
-
-        c.drawCentredString(300, 620, f"Your future is: {msg}")
-
-        c.setFont("Helvetica-Oblique", 12)
-        c.drawCentredString(300, 560, "Amrita Vidyalayam • Computer Expo 2025")
-
-        c.showPage()
-        c.save()
-
-        pdf_data = buffer.getvalue()
-
-        st.download_button(
-            label="📜 Download Certificate (PDF)",
-            data=pdf_data,
-            file_name=f"{name}_certificate.pdf",
-            mime="application/pdf"
-        )
+# ---- FOOTER ----
+st.write("")
+st.markdown(
+    """
+    <div style="text-align:center; color:#A0328C; margin-top:40px;">
+        <p>© 2025 • Amrita Vidyalayam • Grade 7 Computer Expo 🌟</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
