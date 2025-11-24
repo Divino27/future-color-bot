@@ -121,6 +121,18 @@ if st.button("✨ Reveal My Future"):
 
         st.success("Your response has been saved to Excel! 📘")
 
+# Download Excel File
+with open("futurecolor_data.xlsx", "rb") as f:
+    excel_bytes = f.read()
+
+st.download_button(
+    label="📥 Download Visitor Excel Data",
+    data=excel_bytes,
+    file_name="futurecolor_data.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+
 # ---------------- FOOTER ----------------
 st.write("---")
 st.caption("© 2025 • Computer Expo • Amrita Vidyalayam • Made with ❤️ by Grade 7 Students")
