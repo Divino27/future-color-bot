@@ -78,59 +78,59 @@ st.markdown("</div>", unsafe_allow_html=True)
 # ---------------- FUTURE MESSAGES ----------------
 messages = {
     "Red": (
-        "🔥 You are bold, passionate, and full of unstoppable energy! "
-        "Your future is filled with exciting adventures and leadership opportunities. "
-        "People naturally look up to you because of your confidence and strong personality. "
-        "Whatever you dream of — sports, science, arts, or innovation — you will chase it with power! "
+        "🔥 You are bold, passionate, and full of unstoppable energy!\n\n"
+        "Your future is filled with exciting adventures and leadership opportunities.\n\n"
+        "People naturally look up to you because of your confidence and strong personality.\n\n"
+        "Whatever you dream of — sports, science, arts, or innovation — you will chase it with power!\n\n"
         "A bright and thrilling path awaits you!"
     ),
 
     "Blue": (
-        "🌊 Calm, intelligent, and thoughtful — you are someone who brings peace wherever you go. "
-        "Your future shows great success in academics and creative thinking. "
-        "Because of your strong focus and clarity, you will solve complex problems that others find difficult. "
+        "🌊 Calm, intelligent, and thoughtful — you are someone who brings peace wherever you go.\n\n"
+        "Your future shows great success in academics and creative thinking.\n\n"
+        "Because of your strong focus and clarity, you will solve complex problems that others find difficult.\n\n"
         "A future filled with knowledge, wisdom, and meaningful achievements waits for you!"
     ),
 
     "Green": (
-        '🌿 You have a gentle heart and a peaceful soul. You care for people and nature equally. '
-        "Your future shines brightly with kindness, creativity, and emotional strength. "
-        "You will inspire many people with your calm presence, positive attitude, and ability to help others. "
+        "🌿 You have a gentle heart and a peaceful soul. You care for people and nature equally.\n\n"
+        "Your future shines brightly with kindness, creativity, and emotional strength.\n\n"
+        "You will inspire many people with your calm presence, positive attitude, and ability to help others.\n\n"
         "A beautiful, harmonious journey lies ahead for you!"
     ),
 
     "Yellow": (
-        "🌟 Cheerful, bright, and full of brilliant ideas — you are a natural creator! "
-        "Your future is overflowing with creativity, imagination, and fun experiences. "
-        "People love your positive energy, and you have the power to make any place happier. "
+        "🌟 Cheerful, bright, and full of brilliant ideas — you are a natural creator!\n\n"
+        "Your future is overflowing with creativity, imagination, and fun experiences.\n\n"
+        "People love your positive energy, and you have the power to make any place happier.\n\n"
         "You will shine in everything you do, especially in areas like art, innovation, and teamwork!"
     ),
 
     "Purple": (
-        "🔮 You are unique, imaginative, and full of deep thoughts. "
-        "Your future holds extraordinary success in fields that require creativity, strategy, and innovation. "
-        "You think differently from others — and that is your greatest strength. "
+        "🔮 You are unique, imaginative, and full of deep thoughts.\n\n"
+        "Your future holds extraordinary success in fields that require creativity, strategy, and innovation.\n\n"
+        "You think differently from others — and that is your greatest strength.\n\n"
         "One day, your ideas will truly make a difference in the world!"
     ),
 
     "Pink": (
-        "💖 You are loving, joyful, and full of kindness. "
-        "Your future is filled with friendships, happy experiences, and opportunities to spread positivity. "
-        "People enjoy being around you because you make them feel valued and special. "
+        "💖 You are loving, joyful, and full of kindness.\n\n"
+        "Your future is filled with friendships, happy experiences, and opportunities to spread positivity.\n\n"
+        "People enjoy being around you because you make them feel valued and special.\n\n"
         "A warm, cheerful, and exciting journey awaits you!"
     ),
 
     "Black": (
-        "⚫ Strong, focused, and extremely determined — you never give up! "
-        "Your future shows leadership, discipline, and major achievements. "
-        "You have the power to stay calm under pressure and handle challenges better than most people. "
+        "⚫ Strong, focused, and extremely determined — you never give up!\n\n"
+        "Your future shows leadership, discipline, and major achievements.\n\n"
+        "You have the power to stay calm under pressure and handle challenges better than most people.\n\n"
         "A successful and powerful destiny is waiting for you!"
     ),
 
     "White": (
-        "🤍 Pure-hearted, calm, and peaceful — you bring comfort and clarity to everyone around you. "
-        "Your future is full of balance, emotional strength, and gentle success. "
-        "You will create harmony in your surroundings and become a source of inspiration for others. "
+        "🤍 Pure-hearted, calm, and peaceful — you bring comfort and clarity to everyone around you.\n\n"
+        "Your future is full of balance, emotional strength, and gentle success.\n\n"
+        "You will create harmony in your surroundings and become a source of inspiration for others.\n\n"
         "A serene and beautiful journey lies ahead for you!"
     )
 }
