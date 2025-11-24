@@ -26,7 +26,7 @@ body {
 
 /* HEADER CARD */
 .header-box {
-    background: linear-gradient(135deg, #fff, #ffe9f5, #e8d9ff);
+    background: linear-gradient(135deg, #ffffff, #ffe9f5, #e8d9ff);
     padding: 35px;
     border-radius: 30px;
     box-shadow: 0px 8px 22px rgba(0,0,0,0.18);
@@ -159,24 +159,3 @@ if st.button("✨ Reveal My Future"):
             "Age": int(age),
             "City": city,
             "Favorite Color": color,
-            "Message": msg
-        }
-        df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
-        df.to_excel(excel_file, index=False)
-
-        st.success("Your response has been saved to Excel! 📘")
-
-# ---------------- DOWNLOAD BUTTON ----------------
-with open("futurecolor_data.xlsx", "rb") as f:
-    excel_bytes = f.read()
-
-st.download_button(
-    label="📥 Download Visitor Excel Data",
-    data=excel_bytes,
-    file_name="futurecolor_data.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-
-# ---------------- FOOTER ----------------
-st.write("---")
-st.caption("© 2025 • Computer Expo • Amrita Vidyalayam • Made with ❤️ by Grade 7 Students")
