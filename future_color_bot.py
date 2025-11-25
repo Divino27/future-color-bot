@@ -155,8 +155,21 @@ if st.button("✨ Reveal My Future"):
             "Favorite Color": color,
             "Message": msg
         }
+        import xlsxwriter
+
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
-        df.to_excel(excel_file, index=False)
+
+        # Write to a normal Pandas ExcelWriter but with XlsxWriter engine
+        with pd.ExcelWriter(excel_file, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Data')
+
+        # Get XlsxWriter workbook and worksheet objects
+        workbook  = writer.book
+        worksheet = writer.sheets['Data']
+
+        # Set password protection
+        workbook.password = 'Amrita2025'   # <-- set your password here
+
 
         st.success("Your response has been saved to Excel! 📘")
 
