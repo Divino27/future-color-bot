@@ -161,7 +161,7 @@ if st.button("✨ Reveal My Future"):
 
         # Write to a normal Pandas ExcelWriter but with XlsxWriter engine
         with pd.ExcelWriter(excel_file, engine='xlsxwriter') as writer:
-        df.to_excel(writer, index=False, sheet_name='Data')
+            df.to_excel(writer, index=False, sheet_name='Data')
 
         # Get XlsxWriter workbook and worksheet objects
         workbook  = writer.book
